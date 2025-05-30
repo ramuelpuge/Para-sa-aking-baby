@@ -1,324 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Happy Birthday, My Love!</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap');
-  :root {
-    --purple-light: #e6d7f9;
-    --purple-dark: #7b4dcc;
-    --accent: #9252d9;
-    --text-light: #fff;
-    --shadow-purple: rgba(146, 82, 217, 0.7);
-  }
-  * {
-    box-sizing: border-box;
-  }
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f4ebfc 0%, #d9ccf9 25%, #c1b8f8 50%, #a88ef7 75%, #9252d9 100%);
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    color: #3a1d6b;
-  }
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
-    background-image: radial-gradient(white 1.5px, transparent 1.5px),
-                      radial-gradient(white 1.5px, transparent 1.5px);
-    background-position: 0 0, 25px 25px;
-    background-size: 50px 50px;
-    opacity: 0.2;
-    animation: twinkle 5s linear infinite alternate;
-    z-index: -1;
-  }
-  @keyframes twinkle {
-    0% {opacity: 0.1;}
-    100% {opacity: 0.25;}
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday, My Love!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap');
 
-  .section {
-    position: relative;
-    min-height: 100vh;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 0;
-  }
-  
-  #section1 {
-    position: relative;
-    z-index: 0;
-  }
-  #greeting {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3.8rem;
-    margin-bottom: 20px;
-    color: var(--accent);
-    text-shadow: 0 0 8px var(--purple-dark);
-  }
-
-  #gif-container {
-    max-width: 280px;
-    margin: 0 auto 30px;
-    filter: drop-shadow(0 4px 4px var(--shadow-purple));
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 0 15px var(--purple-dark);
-  }
-  #gif-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  #next-btn {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1.4rem;
-    background: var(--accent);
-    color: var(--text-light);
-    padding: 15px 45px;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 8px 15px rgba(146, 82, 217, 0.6);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    user-select: none;
-    z-index: 1;
-  }
-  #next-btn:hover, #next-btn:focus {
-    background: #6e39b0;
-    transform: scale(1.1);
-    outline: none;
-  }
-
-  #section2 {
-    background: linear-gradient(130deg, #ede6fb, #dcd1f8);
-    position: relative;
-    overflow: visible;
-    padding-top: 80px;
-    padding-bottom: 60px;
-    z-index: 0;
-  }
-  #birthday-message {
-    max-width: 680px;
-    margin: 0 auto;
-    font-size: 1.8rem;
-    font-weight: 500;
-    font-style: italic;
-    line-height: 1.6;
-    color: #4a2a93;
-    text-shadow: 1px 1px 5px #d7cafb;
-    padding: 40px 50px;
-    border-radius: 25px;
-    background: #fefefe;
-    box-shadow:
-      0 4px 15px rgba(108, 72, 209, 0.2),
-      inset 0 0 40px rgba(255, 255, 255, 0.9);
-    border: 1.5px solid #d1c6f8;
-    font-family: 'Georgia', serif;
-    user-select: text;
-    position: relative;
-    z-index: 1;
-    background-image: radial-gradient(circle at 0 0, #f5f3ff 2px, transparent 3px),
-                      radial-gradient(circle at 20px 20px, #f5f3ff 2px, transparent 3px);
-    background-size: 40px 40px;
-  }
-
-  #hearts-container {
-    pointer-events: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: visible;
-    z-index: 10;
-  }
-
-  .heart {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: #9252d9cc;
-    opacity: 0.2;
-    filter: drop-shadow(0 0 4px #ac7fe8cc);
-    animation: fallLinear linear infinite;
-    clip-path: polygon(
-      50% 15%,
-      80% 0%,
-      100% 20%,
-      85% 50%,
-      50% 100%,
-      15% 50%,
-      0% 20%,
-      20% 0%
-    );
-  }
-
-  @keyframes fallLinear {
-    0% {
-      transform: translateY(-30px);
-      opacity: 0;
+    :root {
+      --purple-light: #e6d7f9;
+      --purple-dark: #7b4dcc;
+      --accent: #9252d9;
+      --text-light: #fff;
+      --shadow-purple: rgba(146, 82, 217, 0.7);
     }
-    10% {
-      opacity: 0.15;
-    }
-    80% {
-      opacity: 0.15;
-    }
-    100% {
-      transform: translateY(110vh);
-      opacity: 0;
-    }
-  }
 
-  #music-control {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #cbb6f2;
-    border-radius: 50%;
-    width: 56px;
-    height: 56px;
-    box-shadow: 0 0 12px #9252d9aa;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    z-index: 20;
-    transition: background-color 0.3s ease;
-  }
-  #music-control:hover, #music-control:focus {
-    background: #7b4dcc;
-    outline: none;
-  }
-  #music-control svg {
-    fill: #3a1d6b;
-    width: 28px;
-    height: 28px;
-  }
-  #music-control.playing svg {
-    fill: #fff;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  /* Responsive styles */
-  @media (max-width: 600px) {
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f4ebfc 0%, #d9ccf9 25%, #c1b8f8 50%, #a88ef7 75%, #9252d9 100%);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      color: #3a1d6b;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      background-image: radial-gradient(white 1.5px, transparent 1.5px),
+                        radial-gradient(white 1.5px, transparent 1.5px);
+      background-position: 0 0, 25px 25px;
+      background-size: 50px 50px;
+      opacity: 0.2;
+      animation: twinkle 5s linear infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes twinkle {
+      0% {opacity: 0.1;}
+      100% {opacity: 0.25;}
+    }
+
+    .section {
+      position: relative;
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 0;
+    }
+
+    #section1 {
+      position: relative;
+      z-index: 0;
+    }
+
     #greeting {
-      font-size: 2.8rem;
-      padding: 0 10px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.8rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+      text-shadow: 0 0 8px var(--purple-dark);
     }
+
     #gif-container {
-      max-width: 200px;
+      max-width: 280px;
+      margin: 0 auto 30px;
+      filter: drop-shadow(0 4px 4px var(--shadow-purple));
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 0 15px var(--purple-dark);
     }
-    #birthday-message {
-      font-size: 1.3rem;
-      max-width: 90vw;
-      padding: 30px 25px;
+
+    #gif-container img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
+
     #next-btn {
-      padding: 12px 36px;
-      font-size: 1.1rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      background: var(--accent);
+      color: var(--text-light);
+      padding: 15px 45px;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 8px 15px rgba(146, 82, 217, 0.6);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      z-index: 1;
     }
-  }
-</style>
+
+    #next-btn:hover, #next-btn:focus {
+      background: #6e39b0;
+      transform: scale(1.1);
+      outline: none;
+    }
+
+    #section2 {
+      display: none; /* Hide initially */
+      background: linear-gradient(130deg, #ede6fb, #dcd1f8);
+      position: relative;
+      overflow: visible;
+      padding-top: 80px;
+      padding-bottom: 60px;
+      z-index: 0;
+    }
+
+    #birthday-message {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.8rem;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.6;
+      color: #4a2a93;
+      text-shadow: 1px 1px 5px #d7cafb;
+      padding: 40px 50px;
+      border-radius: 25px;
+      background: #fefefe;
+      box-shadow:
+        0 4px 15px rgba(108, 72, 209, 0.2),
+        inset 0 0 40px rgba(255, 255, 255, 0.9);
+      border: 1.5px solid #d1c6f8;
+      font-family: 'Georgia', serif;
+      user-select: text;
+      position: relative;
+      z-index: 1;
+      background-image: radial-gradient(circle at 0 0, #f5f3ff 2px, transparent 3px),
+                        radial-gradient(circle at 20px 20px, #f5f3ff 2px, transparent 3px);
+      background-size: 40px 40px;
+      text-align: justify; /* JUSTIFY text here */
+    }
+
+    #hearts-container {
+      pointer-events: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: visible;
+      z-index: 10;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #9252d9cc;
+      opacity: 0.2;
+      filter: drop-shadow(0 0 4px #ac7fe8cc);
+      animation: fallLinear linear infinite;
+      clip-path: polygon(
+        50% 15%,
+        80% 0%,
+        100% 20%,
+        85% 50%,
+        50% 100%,
+        15% 50%,
+        0% 20%,
+        20% 0%
+      );
+    }
+
+    @keyframes fallLinear {
+      0% { transform: translateY(-30px); opacity: 0; }
+      10% { opacity: 0.15; }
+      80% { opacity: 0.15; }
+      100% { transform: translateY(110vh); opacity: 0; }
+    }
+
+    #music-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #cbb6f2;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      box-shadow: 0 0 12px #9252d9aa;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      z-index: 20;
+      transition: background-color 0.3s ease;
+    }
+
+    #music-control:hover, #music-control:focus {
+      background: #7b4dcc;
+      outline: none;
+    }
+
+    #music-control svg {
+      fill: #3a1d6b;
+      width: 28px;
+      height: 28px;
+    }
+
+    #music-control.playing svg {
+      fill: #fff;
+    }
+
+    @media (max-width: 600px) {
+      #greeting {
+        font-size: 2.8rem;
+        padding: 0 10px;
+      }
+      #gif-container {
+        max-width: 200px;
+      }
+      #birthday-message {
+        font-size: 1.3rem;
+        max-width: 90vw;
+        padding: 30px 25px;
+      }
+      #next-btn {
+        padding: 12px 36px;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<section id="section1" class="section" aria-label="Birthday greeting">
-  <h1 id="greeting" role="heading" aria-level="1">Happy Birthday, My Love!</h1>
-  <div id="gif-container" aria-live="polite" aria-label="Birthday balloons animation">
-    <img id="gift-image" src="https://imgur.com/c71tQfm.jpg" alt="Birthday gift image" />
+<section id="section1" class="section">
+  <h1 id="greeting">Happy Birthday, My Love!</h1>
+  <div id="gif-container">
+    <img src="https://imgur.com/c71tQfm.jpg" alt="Birthday gift" />
   </div>
-
-  <button id="next-btn" aria-controls="section2" aria-label="Go to birthday message">Next</button>
+  <button id="next-btn">Click This</button>
 </section>
 
-<section id="section2" class="section" aria-label="Heartfelt birthday message and music player">
-  <p id="birthday-message" tabindex="0">[Your birthday message here]</p>
+<section id="section2" class="section">
+  <p id="birthday-message">
+    Happy 19th Birthday sa aking cutie pretty and beautiful love love, sana magustuhan mo itong simple gift ko para sayo, uhm ang gusto ko lang iwish para sayo ay sana maging happy ka palagi and sana maraming blessings pa ang dumating sayo. Palagi mong tatandaan na andito lang ako palagi sa tabi mo sumusuporta sa kahit anong gusto mo at palagi mong tatandaan na kahit anong mangyare mahal na mahal kita sobra sobra at palagi't palagi kitang pipiliin araw-araw. Happy happy birthday my love, Enjoy your wonderful day!💜 I love you so much always and forever!!!💜💜💜
+  </p>
 </section>
 
-<div id="hearts-container" aria-hidden="true"></div>
+<div id="hearts-container"></div>
 
-<div id="music-control" role="button" tabindex="0" aria-pressed="false" aria-label="Toggle romantic background music">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M3 22v-20l18 10-18 10z" />
-  </svg>
+<div id="music-control">
+  <svg viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z" /></svg>
 </div>
 
 <audio id="bg-music" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2021/09/15/audio_f97973fd49.mp3?filename=soft-piano-ambience-5309.mp3"></audio>
 
 <script>
-  const nextBtn = document.getElementById('next-btn');
-  const section2 = document.getElementById('section2');
-
-  nextBtn.addEventListener('click', () => {
-    section2.scrollIntoView({behavior: 'smooth'});
-  });
-
-  const musicControl = document.getElementById('music-control');
-  const bgMusic = document.getElementById('bg-music');
-  let musicPlaying = false;
-
-  function toggleMusic() {
-    if (musicPlaying) {
-      bgMusic.pause();
-      musicControl.classList.remove('playing');
-      musicControl.setAttribute('aria-pressed', 'false');
-      musicPlaying = false;
-    } else {
-      bgMusic.play();
-      musicControl.classList.add('playing');
-      musicControl.setAttribute('aria-pressed', 'true');
-      musicPlaying = true;
+    const nextBtn = document.getElementById('next-btn');
+    const section1 = document.getElementById('section1');
+    const section2 = document.getElementById('section2');
+    const musicControl = document.getElementById('music-control');
+    const bgMusic = document.getElementById('bg-music');
+    let musicPlaying = false;
+  
+    nextBtn.addEventListener('click', () => {
+      // Hide section 1 and show section 2
+      section1.style.display = 'none';
+      section2.style.display = 'flex';
+      section2.scrollIntoView({ behavior: 'smooth' });
+  
+      // Optional: lock scroll to top of section2
+      window.scrollTo(0, 0);
+      document.body.style.overflow = 'hidden'; // disable scroll
+      setTimeout(() => {
+        document.body.style.overflow = 'auto'; // allow scroll inside section2 only
+      }, 800); // give time for scrollIntoView animation
+    });
+  
+    musicControl.addEventListener('click', toggleMusic);
+    musicControl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMusic();
+      }
+    });
+  
+    function toggleMusic() {
+      if (musicPlaying) {
+        bgMusic.pause();
+        musicControl.classList.remove('playing');
+        musicControl.setAttribute('aria-pressed', 'false');
+        musicPlaying = false;
+      } else {
+        bgMusic.play();
+        musicControl.classList.add('playing');
+        musicControl.setAttribute('aria-pressed', 'true');
+        musicPlaying = true;
+      }
     }
-  }
-  musicControl.addEventListener('click', toggleMusic);
-  musicControl.addEventListener('keydown', (e) => {
-    if(e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      toggleMusic();
+  
+    const heartsContainer = document.getElementById('hearts-container');
+    const colors = ['#9252d9cc', '#a373edcc', '#b181f3cc', '#c4abf8cc'];
+  
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (8 + Math.random() * 7) + 's';
+      const size = 14 + Math.random() * 20;
+      heart.style.width = size + 'px';
+      heart.style.height = ((size * 18) / 20) + 'px';
+      heart.style.background = colors[Math.floor(Math.random() * colors.length)];
+      heart.style.filter = `drop-shadow(0 0 6px ${heart.style.background})`;
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 15000);
     }
-  });
-
-  const heartsContainer = document.getElementById('hearts-container');
-  const colors = ['#9252d9cc', '#a373edcc', '#b181f3cc', '#c4abf8cc'];
-
-  function createHeart() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.animationDuration = (8 + Math.random() * 7) + 's';
-    const size = 14 + Math.random() * 20;
-    heart.style.width = size + 'px';
-    heart.style.height = ((size * 18) / 20) + 'px';
-    heart.style.background = colors[Math.floor(Math.random() * colors.length)];
-    heart.style.filter = `drop-shadow(0 0 6px ${heart.style.background})`;
-    heartsContainer.appendChild(heart);
-
-    setTimeout(() => heart.remove(), 15000);
-  }
-
-  setInterval(createHeart, 200);
-
-  window.addEventListener('beforeunload', () => {
-    if (musicPlaying) {
-      bgMusic.pause();
-    }
-  });
-</script>
-
-</body>
-</html>
+  
+    setInterval(createHeart, 200);
+  
+    window.addEventListener('beforeunload', () => {
+      if (musicPlaying) {
+        bgMusic.pause();
+      }
+    });
+  </script>
+  
